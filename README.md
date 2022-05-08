@@ -9,4 +9,6 @@ rusherhack worked with changing value in autosign.json but it needed to restart 
 -> sets sign's < offset > line to < text >  
 example: ;autosign set 1 "☯ＭｅｌｌＤａ☯"  
 
+;autosign steal <offset(1~4)>  
+-> set sign's < offset > to player currentitem's displayname.  
 place sign, wait for a sec, then press done.
