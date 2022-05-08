@@ -24,5 +24,24 @@ object AutoSignCommand : ClientCommand(
                 }
             }
         }
+        literal("steal") {
+            int("signoffset") { signoffset ->
+                executeSafe("Steals the name of the item that you're holding.") {
+                    if ((0 < signoffset.value) && (signoffset.value < 5)) {
+                        if (!player.inventory.getCurrentItem().isEmpty) {
+                            val text = player.inventory.getCurrentItem().displayName
+                            AutoSignManager.changeSign(signoffset.value, text)
+                            MessageSendHelper.sendChatMessage("Set line ${signoffset.value} to $text")
+                        }
+                        else {
+                            MessageSendHelper.sendWarningMessage("Hold item that you want to steal the name.")
+                        }
+                    }
+                    else {
+                        MessageSendHelper.sendWarningMessage("Set your signoffset value to 1~4.")
+                    }
+                }
+            }
+        }
     }
 }

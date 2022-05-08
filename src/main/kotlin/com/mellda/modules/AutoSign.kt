@@ -12,6 +12,7 @@ import net.minecraft.util.text.ITextComponent
 import net.minecraft.tileentity.TileEntitySign
 import net.minecraftforge.fml.common.gameevent.TickEvent
 
+
 /**
  * This is a module. First set properties then settings then add listener.
  * **/
