@@ -31,10 +31,10 @@ internal object AutoSign : PluginModule(
              if (guiScreen != null) {
                  if (guiScreen is GuiEditSign) {
                      val sign = mc.currentScreen as GuiEditSign
-                     sign.tileSign.signText[0] = TextComponentString(AutoSignManager.getSign(0)) as ITextComponent
-                     sign.tileSign.signText[1] = TextComponentString(AutoSignManager.getSign(1)) as ITextComponent
-                     sign.tileSign.signText[2] = TextComponentString(AutoSignManager.getSign(2)) as ITextComponent
-                     sign.tileSign.signText[3] = TextComponentString(AutoSignManager.getSign(3)) as ITextComponent
+                     sign.tileSign.signText[0] = TextComponentString(AutoSignManager.getSign(1)) as ITextComponent
+                     sign.tileSign.signText[1] = TextComponentString(AutoSignManager.getSign(2)) as ITextComponent
+                     sign.tileSign.signText[2] = TextComponentString(AutoSignManager.getSign(3)) as ITextComponent
+                     sign.tileSign.signText[3] = TextComponentString(AutoSignManager.getSign(4)) as ITextComponent
                  }
             }
         }
